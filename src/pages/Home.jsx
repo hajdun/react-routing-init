@@ -1,22 +1,27 @@
 
+import { Link } from "react-router-dom"
+
 const pageLinks = [
     {
         icon: '🐕',
         title: 'Check out our family!',
         desc: 'We hope you enjoy the story of this wolfpack or bloodthirsty yorkshire terriers.',
         badge: 'Our dogs',
+        path: "our-dogs"
     },
     {
         icon: '🛒',
         title: 'Shop',
         desc: 'Look at the cubs!',
         badge: 'buy',
+        path: "puppies"
     },
     {
         icon: '?',
         title: 'Do you have questions?',
         desc: 'Talk to us!',
         badge: 'contact',
+        path: "contact"
     }
 ]
 
@@ -71,11 +76,14 @@ export default function Home() {
                         }}>
                             {c.badge}
                         </span>
-
-                        <h3 style={{ fontSize: 'var(--text-base)', fontWeight: 700 }}>{c.title}</h3>
+                        <Link key={c.title} to={c.path} >
+                            <h3 style={{ fontSize: 'var(--text-base)', fontWeight: 700 }}>{c.title} ❯ </h3>
+                        </Link>
                         <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
                             {c.desc}
                         </p>
+
+
                     </div>
                 ))}
             </div>
