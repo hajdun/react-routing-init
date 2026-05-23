@@ -6,11 +6,13 @@ import Home from './pages/Home'
 import OurDogs from './pages/OurDogs'
 import Shop from './pages/Shop'
 import Contact from './pages/Contact'
+import PuppyProfile from './pages/PuppyProfile'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
   { path: '/our-dogs', element: <OurDogs /> },
   { path: '/puppies', element: <Shop /> },
+  { path: '/puppies/:id', element: <PuppyProfile /> },
   { path: '/contact', element: <Contact /> },
 ])
 

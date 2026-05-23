@@ -154,9 +154,11 @@ export default function Shop() {
                             </p>
 
                             {/* CTA */}
-                            <button
+                            <Link
+
+                                to={"/puppies/" + dog.id}
                                 disabled={dog.tag === 'Reserved'}
-                                onClick={() => { }}
+
                                 style={{
                                     marginTop: 'var(--space-2)',
                                     width: '100%',
@@ -178,7 +180,7 @@ export default function Shop() {
                                 }}
                             >
                                 {dog.tag === 'Reserved' ? 'Already claimed 😢' : 'I need this dog 🐾'}
-                            </button>
+                            </Link>
                         </div>
                     </article>
                 ))}
