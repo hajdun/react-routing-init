@@ -7,6 +7,7 @@ import OurDogs from './pages/OurDogs'
 import Shop from './pages/Shop'
 import Contact from './pages/Contact'
 import PuppyProfile from './pages/PuppyProfile'
+import NotFound from './pages/NotFound'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   { path: '/puppies', element: <Shop /> },
   { path: '/puppies/:id', element: <PuppyProfile /> },
   { path: '/contact', element: <Contact /> },
+  { path: '*', element: <NotFound /> },
 ])
 
 createRoot(document.getElementById('root')).render(

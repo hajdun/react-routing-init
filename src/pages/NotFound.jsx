@@ -1,4 +1,5 @@
 // src/pages/NotFound.jsx
+import { Link } from "react-router-dom"
 
 export default function NotFound() {
 
@@ -53,7 +54,7 @@ export default function NotFound() {
 
             {/* ── Actions ── */}
             <div style={{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <div style={{
+                <Link to="/" style={{
                     display: 'inline-flex', alignItems: 'center', gap: 'var(--space-2)',
                     padding: 'var(--space-3) var(--space-6)',
                     borderRadius: 'var(--radius-md)',
@@ -61,9 +62,9 @@ export default function NotFound() {
                     fontWeight: 600, fontSize: 'var(--text-sm)', textDecoration: 'none',
                 }}>
                     ← Go home
-                </div>
+                </Link>
 
-                <div style={{
+                <Link to="/puppies" style={{
                     display: 'inline-flex', alignItems: 'center', gap: 'var(--space-2)',
                     padding: 'var(--space-3) var(--space-6)',
                     borderRadius: 'var(--radius-md)',
@@ -72,7 +73,7 @@ export default function NotFound() {
                     fontWeight: 600, fontSize: 'var(--text-sm)', textDecoration: 'none',
                 }}>
                     Look at puppies instead 🐾
-                </div>
+                </Link>
             </div>
 
             {/* ── Divider ── */}
@@ -95,10 +96,10 @@ export default function NotFound() {
                 {[
                     { to: '/', label: 'Home' },
                     { to: '/our-dogs', label: 'Our Dogs' },
-                    { to: '/shop', label: 'Shop' },
+                    { to: '/puppies', label: 'Shop' },
                     { to: '/contact', label: 'Contact' },
                 ].map(link => (
-                    <div key={link.to} style={{
+                    <Link key={link.to} to={link.to} style={{
                         padding: 'var(--space-2) var(--space-4)',
                         borderRadius: 'var(--radius-full)',
                         background: 'var(--color-surface)',
@@ -108,7 +109,7 @@ export default function NotFound() {
                         boxShadow: 'var(--shadow-sm)',
                     }}>
                         {link.label}
-                    </div>
+                    </Link>
                 ))}
             </div>
 
