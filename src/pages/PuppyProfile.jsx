@@ -18,7 +18,7 @@ const PuppyProfile = () => {
 
     const currentPuppy = dogs.find(dog => dog.id.toString() === id)
     return (
-        <div>
+        <main style={{ maxWidth: '1100px', margin: '0 auto', padding: 'var(--space-12) var(--space-6)' }}>
             <div>
                 Puppy profile!
             </div>
@@ -30,7 +30,7 @@ const PuppyProfile = () => {
             <div>
                 {currentPuppy.desc}
             </div>
-        </div>
+        </main>
     );
 }
 
